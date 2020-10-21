@@ -30,6 +30,7 @@ const actions = {
   },
 
   async filterTodos({ commit }, e) {
+    console.log(e)
     const limit = parseInt(e.target.options[e.target.options.selectedIndex].innerText)
 
     const response = await axios.get(`${todosURL}?_limit=${limit}`)
